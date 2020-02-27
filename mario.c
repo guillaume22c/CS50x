@@ -9,9 +9,8 @@ int main(void)
     {
         height = get_int("Height:");
     }
-    while(height >8 || height <1);
+    while (height > 8 || height < 1);
  
-
     //Draw pattern according to height input//
     for (int l = 0; l < height ; l++)
     {
@@ -25,5 +24,5 @@ int main(void)
         }
         printf("\n");
     }
-       return height;
+    return height;
 }
