@@ -86,21 +86,21 @@ int main(void)
     if (size_counter == 16)
     {
         if (begmaster == 51 || begmaster == 52 || begmaster == 53 || begmaster == 54 || begmaster == 55)
-        printf("MasterCard\n");
+        printf("MASTERCARD\n");
     }
         //Visa//
     if (size_counter == 13)
     {
         if (digit13 == 4)
         {
-            printf("Visa\n");
+            printf("VISA\n");
         }
     }
     else if (size_counter == 16)
     {
         if (digit16 == 4)
         {
-            printf("Visa\n");
+            printf("VISA\n");
         }
     }
 }
