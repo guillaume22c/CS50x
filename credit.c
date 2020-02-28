@@ -95,18 +95,21 @@ int main(void)
         }
     }
         //Visa//
-    if (size_counter == 13)
+    if (check_sum % 10 == 0)
     {
-        if (digit13 == 4)
+        if (size_counter == 13)
         {
-            printf("VISA\n");
+            if (digit13 == 4)
+            {
+               printf("VISA\n");
+            }
         }
-    }
-    else if (size_counter == 16)
-    {
-        if (digit16 == 4)
+        else if (size_counter == 16)
         {
-            printf("VISA\n");
+            if (digit16 == 4)
+            {
+                printf("VISA\n");
+            }
         }
     }
 }
