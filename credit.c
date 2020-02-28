@@ -86,7 +86,13 @@ int main(void)
     if (size_counter == 16)
     {
         if (begmaster == 51 || begmaster == 52 || begmaster == 53 || begmaster == 54 || begmaster == 55)
-        printf("MASTERCARD\n");
+        {
+            printf("MASTERCARD\n");
+        }
+        else if (begmaster < 21 || begmaster > 55)
+        {
+            printf("INVALID\n");
+        }
     }
         //Visa//
     if (size_counter == 13)
