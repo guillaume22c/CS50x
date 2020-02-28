@@ -20,7 +20,6 @@ int main(void)
         ccsize = ccsize / 10;
         size_counter ++;
     }
-    printf("%i\n", size_counter);
 
     // identify credit card digits separately //
     int digit1 = cc_number % 10;
