@@ -57,31 +57,36 @@ int main(void)
     int csum16 = digit16 * 2;
     csum16 = csum16 % 10 + (csum16 % 100 / 10);
 
-    int check_sum = digit1 + csum2 + digit3 + csum4 + digit5 + csum6 + digit7 + csum8 + digit9 + csum10 + digit11 + csum12 + digit13 + csum14 + digit15 + csum16;
+    int check_sum = digit1 + csum2 + digit3 + csum4 + digit5 + csum6 + digit7 + csum8 + digit9 + csum10 + digit11 + csum12 + digit13 +
+                    csum14 + digit15 + csum16;
 
     //Control validity card number//
-        //CheckSum//
+    //CheckSum//
     if (check_sum % 10 != 0)
     {
         printf("INVALID\n");
     }
-        //Length//
+    //Length//
     else if (size_counter < 13 || size_counter > 16)
     {
         printf("INVALID\n");
     }
 
     //Identify credit card type//
-        //AMEX//
+    //AMEX//
     int begamex = cc_number / 10000000000000; // Variable identifying 2 first digit from credit card //
     if (size_counter == 15)
     {
         if (begamex == 34 || begamex == 37)
-        printf("AMEX\n");
+        {
+            printf("AMEX\n");
+        }
         else
-        printf("INVALID\n");
+        {
+            printf("INVALID\n");
+        }
     }
-        //MasterCard//
+    //MasterCard//
     int begmaster = cc_number / 100000000000000; // Variable identifying 2 first digit from credit card //
     if (size_counter == 16)
     {
@@ -94,14 +99,14 @@ int main(void)
             printf("INVALID\n");
         }
     }
-        //Visa//
+    //Visa//
     if (check_sum % 10 == 0)
     {
         if (size_counter == 13)
         {
             if (digit13 == 4)
             {
-               printf("VISA\n");
+                printf("VISA\n");
             }
         }
         else if (size_counter == 16)
