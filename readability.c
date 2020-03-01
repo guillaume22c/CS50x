@@ -24,7 +24,7 @@ int main(void)
     int nbr_words = 1;
     for (int i = 0 ; i < text_long ; i++)
     {
-        if (isspace(text[i]) && isalnum(text[i+1]))
+        if (isspace(text[i]) && (isalnum(text[i+1]) || ispunct(text[i+1])))
         nbr_words++;
     }
 
