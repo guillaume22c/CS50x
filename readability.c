@@ -46,8 +46,6 @@ int main(void)
 
     int index = 0.0588 * average_letters - 0.296 * average_sentences - 15.5;
 
-    printf("%i, %f, %f\n", index, average_letters, average_sentences);
-
     // Print readability index //
     if (index >= 16)
     {
