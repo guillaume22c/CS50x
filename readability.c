@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 #include <ctype.h>
 #include <string.h>
 
@@ -41,10 +42,11 @@ int main(void)
 
     // Calculate readability index //
 
-    float average_letters = 100 * nbr_letters / nbr_words;
-    float average_sentences = 100 * nbr_sentences / nbr_words;
+    float average_letters = 100 * (float) nbr_letters / (float) nbr_words;
+    float average_sentences = 100 * (float) nbr_sentences / (float) nbr_words;
 
-    int index = 0.0588 * average_letters - 0.296 * average_sentences - 15.5;
+    int index = round(0.0588 * average_letters - 0.296 * average_sentences - 15.5);
+    printf("%i, %f, %f\n", index, average_letters, average_sentences);
 
     // Print readability index //
     if (index >= 16)
