@@ -54,13 +54,4 @@ int main(void)
     }
     if (index > 1 && index <16)
     printf("Grade %i\n", index);
-
-    // Debugging printd help //
-    printf("%i, %f, %f\n", index, average_letters, average_sentences);
-    printf("%i\n", text_long);
-    printf("%i\n", nbr_letters);
-    printf("%i\n", nbr_words);
-    printf("%i\n", nbr_sentences);
-    float indexdetail = 0.0588 * average_letters - 0.296 * average_sentences - 15.8;
-    printf("%f\n", indexdetail);
 }
