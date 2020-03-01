@@ -16,24 +16,30 @@ int main(void)
     int nbr_letters = 0;
     for (int i = 0 ; i < text_long ; i++)
     {
-         if (isalnum(text[i]))
-         nbr_letters++;
+        if (isalnum(text[i]))
+        {
+            nbr_letters++;
+        }
     }
 
     // Count nbr of words //
     int nbr_words = 1;
     for (int i = 0 ; i < text_long ; i++)
     {
-        if (isspace(text[i]) && (isalnum(text[i+1]) || ispunct(text[i+1])))
-        nbr_words++;
+        if (isspace(text[i]) && (isalnum(text[i + 1]) || ispunct(text[i + 1])))
+        {
+            nbr_words++;
+        }
     }
 
     // Count nbr of sentences //
     int nbr_sentences = 0;
     for (int i = 0 ; i < text_long ; i++)
     {
-        if ((text[i] == '.' || text[i] == '?' || text[i] == '!') && isalnum(text[i-1]))
-        nbr_sentences++;
+        if ((text[i] == '.' || text[i] == '?' || text[i] == '!') && isalnum(text[i - 1]))
+        {
+            nbr_sentences++;
+        }
     }
 
     // Calculate readability index //
@@ -52,6 +58,8 @@ int main(void)
     {
         printf("Before Grade 1\n");
     }
-    if (index > 1 && index <16)
-    printf("Grade %i\n", index);
+    if (index > 1 && index < 16)
+    {
+        printf("Grade %i\n", index);
+    }
 }
