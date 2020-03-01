@@ -11,7 +11,6 @@ int main(void)
 
     // Count length of text //
     int text_long = strlen(text);
-    printf("%i\n", text_long);
 
     // Count nbr caracters in text //
     int nbr_letters = 0;
@@ -20,7 +19,6 @@ int main(void)
          if (isalnum(text[i]))
          nbr_letters++;
     }
-    printf("%i\n", nbr_letters);
 
     // Count nbr of words //
     int nbr_words = 1;
@@ -29,7 +27,6 @@ int main(void)
         if (isspace(text[i]) && isalnum(text[i+1]))
         nbr_words++;
     }
-    printf("%i\n", nbr_words);
 
     // Count nbr of sentences //
     int nbr_sentences = 0;
@@ -38,7 +35,6 @@ int main(void)
         if ((text[i] == '.' || text[i] == '?' || text[i] == '!') && isalnum(text[i-1]))
         nbr_sentences++;
     }
-    printf("%i\n", nbr_sentences);
 
     // Calculate readability index //
 
@@ -46,7 +42,6 @@ int main(void)
     float average_sentences = 100 * (float) nbr_sentences / (float) nbr_words;
 
     int index = round(0.0588 * average_letters - 0.296 * average_sentences - 15.5);
-    printf("%i, %f, %f\n", index, average_letters, average_sentences);
 
     // Print readability index //
     if (index >= 16)
