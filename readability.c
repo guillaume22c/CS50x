@@ -41,7 +41,7 @@ int main(void)
     float average_letters = 100 * (float) nbr_letters / (float) nbr_words;
     float average_sentences = 100 * (float) nbr_sentences / (float) nbr_words;
 
-    int index = round(0.0588 * average_letters - 0.296 * average_sentences - 15.5);
+    int index = round(0.0588 * average_letters - 0.296 * average_sentences - 15.8);
 
     // Print readability index //
     if (index >= 16)
@@ -54,4 +54,13 @@ int main(void)
     }
     if (index > 1 && index <16)
     printf("Grade %i\n", index);
+
+    // Debugging printd help //
+    printf("%i, %f, %f\n", index, average_letters, average_sentences);
+    printf("%i\n", text_long);
+    printf("%i\n", nbr_letters);
+    printf("%i\n", nbr_words);
+    printf("%i\n", nbr_sentences);
+    float indexdetail = 0.0588 * average_letters - 0.296 * average_sentences - 15.8;
+    printf("%f\n", indexdetail);
 }
