@@ -61,7 +61,7 @@ int main(int argc, string argv[])
                     }
             }
         }
-        printf("%s", cipher);
+        printf("ciphertext: %s\n", cipher);
     }
 
     else
