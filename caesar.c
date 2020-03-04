@@ -38,13 +38,13 @@ int main(int argc, string argv[])
         string cipher = plain;
         for (int j = 0 ; j < plain_length ; j++)
         {
-            if(isalpha(plain[j]) && islower(plain[j]))
+            if (isalpha(plain[j]) && islower(plain[j]))
             {
-                cipher[j] = ((plain[j]- 96 + k) % 26) + 96;
+                cipher[j] = ((plain[j] - 96 + k) % 26) + 96;
             }
-            if(isalpha(plain[j]) && isupper(plain[j]))
+            if (isalpha(plain[j]) && isupper(plain[j]))
             {
-                cipher[j] = ((plain[j]- 64 + k) % 26) + 64;
+                cipher[j] = ((plain[j] - 64 + k) % 26) + 64;
             }
         }
         printf("ciphertext: %s\n", cipher);
