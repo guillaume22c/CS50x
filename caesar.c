@@ -40,14 +40,7 @@ int main(int argc, string argv[])
         {
             if(isalpha(plain[j]) && islower(plain[j]))
                 {
-                if((plain[j] + k) <= 122)
-                    {
-                        cipher[j] = (plain[j] + k);
-                    }
-                if((plain[j] + k) > 122)
-                    {
-                        cipher[j] = ((plain[j]- 96 + k) % 26) + 96;
-                    }
+                    cipher[j] = ((plain[j]- 96 + k) % 26) + 96;
                 }
             if(isalpha(plain[j]) && isupper(plain[j]))
             {
