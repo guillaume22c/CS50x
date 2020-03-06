@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     // Check no caracter duplication in key - case insensitive //
     for (int i = 0 ; i < key_size ; i++)
     {
-        for (int j = i+1 ; argv[1][j] != '\0' ; j++)
+        for (int j = i + 1 ; argv[1][j] != '\0' ; j++)
         {
             if ((argv[1][j]) == (argv[1][i]))
             {
@@ -52,7 +52,7 @@ int main(int argc, string argv[])
     // Convert plain text into ciphertext
     int plain_size = strlen(plain_text);
     printf("ciphertext: ");
-    
+
 
     for (int k = 0 ; k < plain_size ; k++)
     {
