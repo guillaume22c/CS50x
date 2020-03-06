@@ -50,7 +50,8 @@ int main(int argc, string argv[])
 
     // Convert plain text into ciphertext
     int plain_size = strlen(plain_text);
-    printf("%i\n", plain_size);
+    printf("ciphertext: ");
+    
 
     for (int k = 0 ; k < plain_size ; k++)
     {
@@ -70,4 +71,5 @@ int main(int argc, string argv[])
             }
         }
     }
+    printf("\n");
 }
