@@ -42,6 +42,7 @@ int main(int argc, string argv[])
             if ((argv[1][j]) == (argv[1][i]))
             {
                 printf("Substitution key unvalid\n");
+                return 1;
             }
         }
     }
